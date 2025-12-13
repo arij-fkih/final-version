@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Drink & Fly</title>
+    <link rel="icon" type="image/x-icon" href="pictures/favicon.ico">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="pictures/logo.png" alt="Logo Drink & Fly">
+                <p>Drink & Fly</p>
+            </div>
+            <ul>
+                <li><a href="home.html" class="nav-link">Accueil</a></li>
+                <li><a href=menu.html class="nav-link">Menu</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <h1>Notre Menu</h1>
+        <p class="subtitle">Découvrez nos délicieuses créations</p>
+        <div class="filter-bar">
+            <h3>Filtrer par catégorie :</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="tous">Tous les produits</button>
+                <button class="filter-btn" data-category="boissons-chaudes">Boissons Chaudes</button>
+                <button class="filter-btn" data-category="boissons-froides">Boissons Froides</button>
+                <button class="filter-btn" data-category="patisseries">Pâtisseries</button>
+                <button class="filter-btn" data-category="sandwiches">Sandwiches</button>
+            </div>
+        </div>
+        <div class="sort-bar">
+            <label for="sortSelect">Trier par :</label>
+            <select id="sortSelect">
+                <option value="default">Par défaut</option>
+                <option value="price-asc">Prix croissant</option>
+                <option value="price-desc">Prix décroissant</option>
+                <option value="name">Nom (A-Z)</option>
+            </select>
+        </div>
+        <div class="products-grid" id="productsGrid">
+
+            <div class="product-card" data-category="boissons-chaudes" data-price="3.50" data-name="Espresso">
+                <img src="pictures\products\espresso.jpg" alt="Espresso">
+                <div class="product-content">
+                    <span class="product-category">Boissons Chaudes</span>
+                    <h3 class="product-name">Espresso</h3>
+                    <p class="product-description">Café corsé et intense, préparé avec des grains sélectionnés</p>
+                    <p class="product-price">3.50 DT</p>
+                    <div class="product-details-hover">
+                        <p><strong>Détails complets :</strong> Origine Ethiopie. Notes de chocolat noir et caramel. Torréfaction artisanale.</p>
+                        <p class="product-review">⭐⭐⭐⭐⭐ "Excellent café !" - Marie L.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="boissons-chaudes" data-price="5.00" data-name="Cappuccino">
+                <img src="pictures/products/cappuccino.jpg" alt="Cappuccino">
+                <div class="product-content">
+                    <span class="product-category">Boissons Chaudes</span>
+                    <h3 class="product-name">Cappuccino</h3>
+                    <p class="product-description">Espresso avec lait mousseux et une touche de cacao</p>
+                    <p class="product-price">5.00 DT</p>
+                    <div class="product-details-hover">
+                        <p><strong>Détails complets :</strong> Servi avec un motif latte art personnalisé. Mousse onctueuse et crémeuse.</p>
+                        <p class="product-review">⭐⭐⭐⭐⭐ "Le meilleur cappuccino de la ville !" - Ahmed K.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="boissons-chaudes" data-price="4.00" data-name="Thé Vert">
+                <img src="pictures/products/the-vert.jpg" alt="Thé Vert">
+                <div class="product-content">
+                    <span class="product-category">Boissons Chaudes</span>
+                    <h3 class="product-name">Thé Vert</h3>
+                    <p class="product-description">Thé vert bio avec une touche de menthe fraîche</p>
+                    <p class="product-price">4.00 DT</p>
+                    <div class="product-details-hover">
+                        <p><strong>Détails complets :</strong> Infusion à la perfection, riche en antioxydants. Menthe cultivée localement.</p>
+                        <p class="product-review">⭐⭐⭐⭐ "Très rafraîchissant !" - Salma B.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="boissons-chaudes" data-price="5.50" data-name="Latte Vanille">
+                <img src="pictures/products/latte.jpg" alt="Latte Vanille">
+                <div class="product-content">
+                    <span class="product-category">Boissons Chaudes</span>
+                    <h3 class="product-name">Latte Vanille</h3>
+                    <p class="product-description">Café latte avec sirop de vanille naturel</p>
+                    <p class="product-price">5.50 DT</p>
+                    <div class="product-details-hover">
+                        <p><strong>Détails complets :</strong> Lait entier ou végétal au choix. Vanille de Madagascar.</p>
+                        <p class="product-review">⭐⭐⭐⭐⭐ "Délicieux et réconfortant !" - Yasmine M.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boissons Froides -->
+            <div class="product-card" data-category="boissons-froides" data-price="4.50" data-name="Limonade">
+                <img src="pictures/products/limonade.jpg" alt="Limonade">
+                <div class="product-content">
+                    <span class="product-category">Boissons Froides</span>
+                    <h3 class="product-name">Limonade Maison</h3>
+                    <p class="product-description">Citrons frais pressés avec une touche de menthe</p>
+                    <p class="product-price">4.50 DT</p>
+                    <div class="product-details-hover">
+                        <p><strong>Détails complets :</strong> 100% naturel, sans sucres ajoutés. Citrons bio de la région.</p>
+                        <p class="product-review">⭐⭐⭐⭐⭐ "Parfaite pour l'été !" - Karim T.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="boissons-froides" data-price="6.50" data-name="Smoothie Fruits">
+                <img src="pictures/products/smoothie.jpg" alt="Smoothie Fruits">
+                <div class="product-content">
+                    <span class="product-category">Boissons Froides</span>
+                    <h3 class="product-name">Smoothie Fruits Rouges</h3>
+                    <p class="product-description">Mélange de fraises, framboises et myrtilles</p>
+                    <p class="product-price">6.50 DT</p>
+                    <div class="product-details-hover">
+                        <p><strong>Détails complets :</strong> 100% naturel, riche en vitamines. Fruits frais du jour.</p>
+                        <p class="product-review">⭐⭐⭐⭐⭐ "Énergisant et savoureux !" - Leila R.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="boissons-froides" data-price="5.00" data-name="Jus d'Orange">
+                <img src="pictures/products/jus-orange.jpg" alt="Jus d'Orange">
+                <div class="product-content">
+                    <span class="product-category">Boissons Froides</span>
+                    <h3 class="product-name">Jus d'Orange Frais</h3>
+                    <p class="product-description">Oranges pressées minute</p>
+                    <p class="product-price">5.00 DT</p>
+                    <div class="product-details-hover">
+                        <p><strong>Détails complets :</strong> 100% pur jus, sans conservateurs. Pressé devant vous.</p>
+                        <p class="product-review">⭐⭐⭐⭐ "Frais et vitaminé !" - Amine H.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pâtisseries -->
+            <div class="product-card" data-category="patisseries" data-price="2.50" data-name="Croissant">
+                <img src="pictures/products/croissant.jpg" alt="Croissant">
+                <div class="product-content">
+                    <span class="product-category">Pâtisseries</span>
+                    <h3 class="product-name">Croissant au Beurre</h3>
+                    <p class="product-description">Croissant artisanal feuilleté et croustillant</p>
+                    <p class="product-price">2.50 DT</p>
+                    <div class="product-details-hover">
+                        <p><strong>Détails complets :</strong> Préparé chaque matin avec du beurre de qualité supérieure.</p>
+                        <p class="product-review">⭐⭐⭐⭐⭐ "Comme à Paris !" - Sophie D.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="patisseries" data-price="5.50" data-name="Tarte aux Pommes">
+                <img src="pictures/products/tarte.jpg" alt="Tarte aux Pommes">
+                <div class="product-content">
+                    <span class="product-category">Pâtisseries</span>
+                    <h3 class="product-name">Tarte aux Pommes</h3>
+                    <p class="product-description">Tarte maison aux pommes caramélisées</p>
+                    <p class="product-price">5.50 DT</p>
+                    <div class="product-details-hover">
+                        <p><strong>Détails complets :</strong> Recette traditionnelle, servie tiède avec crème anglaise.</p>
+                        <p class="product-review">⭐⭐⭐⭐⭐ "Un délice !" - Nadia F.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="patisseries" data-price="4.00" data-name="Éclair Chocolat">
+                <img src="pictures/products/eclair.jpg" alt="Éclair Chocolat">
+                <div class="product-content">
+                    <span class="product-category">Pâtisseries</span>
+                    <h3 class="product-name">Éclair au Chocolat</h3>
+                    <p class="product-description">Éclair fourré de crème pâtissière au chocolat</p>
+                    <p class="product-price">4.00 DT</p>
+                    <div class="product-details-hover">
+                        <p><strong>Détails complets :</strong> Glaçage au chocolat noir 70%. Crème onctueuse.</p>
+                        <p class="product-review">⭐⭐⭐⭐⭐ "Fondant et délicieux !" - Rami S.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sandwiches -->
+            <div class="product-card" data-category="sandwiches" data-price="8.00" data-name="Sandwich Club">
+                <img src="pictures/products/sandwich-club.jpg" alt="Sandwich Club">
+                <div class="product-content">
+                    <span class="product-category">Sandwiches</span>
+                    <h3 class="product-name">Sandwich Club</h3>
+                    <p class="product-description">Poulet grillé, bacon, salade, tomate, mayonnaise</p>
+                    <p class="product-price">8.00 DT</p>
+                    <div class="product-details-hover">
+                        <p><strong>Détails complets :</strong> Pain de mie grillé, accompagné de frites maison.</p>
+                        <p class="product-review">⭐⭐⭐⭐⭐ "Copieux et savoureux !" - Omar A.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="sandwiches" data-price="7.00" data-name="Sandwich Végétarien">
+                <img src="pictures/products/sandwich-vege.jpg" alt="Sandwich Végétarien">
+                <div class="product-content">
+                    <span class="product-category">Sandwiches</span>
+                    <h3 class="product-name">Sandwich Végétarien</h3>
+                    <p class="product-description">Légumes grillés, houmous, fromage de chèvre</p>
+                    <p class="product-price">7.00 DT</p>
+                    <div class="product-details-hover">
+                        <p><strong>Détails complets :</strong> Pain complet bio. Option vegan disponible.</p>
+                        <p class="product-review">⭐⭐⭐⭐ "Sain et délicieux !" - Ines Z.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer - Identique à la page d'accueil -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Drink & Fly</h3>
+                <p>Votre pause café parfaite au cœur de la ville.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>📍 123 Rue du Café, Sousse, Tunisie</p>
+                <p>📞 +216 25 123 456</p>
+                <p>✉️ contact@drinkandfly.tn</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horaires</h3>
+                <p>Lundi - Vendredi: 7h - 20h</p>
+                <p>Samedi - Dimanche: 8h - 22h</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><img src="pictures/facebook.png" alt="facebook"></a>
+                    <a href="#" title="Instagram"><img src="pictures/instagram.png" alt="instagram"></a>
+                    <a href="#" title="Tik-Tok"><img src="pictures/tik-tok.png" alt="tik-tok"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Drink & Fly. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+</html>
