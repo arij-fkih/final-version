@@ -1,6 +1,4 @@
-// =========================================================
-// ÉLÉMENTS DU FORMULAIRE
-// =========================================================
+/// ÉLÉMENTS DU FORMULAIRE
 const contactForm = document.getElementById('contactForm');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
@@ -10,9 +8,9 @@ const nameError = document.getElementById('nameError');
 const emailError = document.getElementById('emailError');
 const messageError = document.getElementById('messageError');
 
-// =========================================================
+
 // VALIDATION DU NOM
-// =========================================================
+
 function validateName() {
     const name = nameInput.value.trim();
     

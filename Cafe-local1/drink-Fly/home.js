@@ -1,8 +1,6 @@
-// =========================================================
-// BASE DE DONNÉES DES PRODUITS DU MENU
-// =========================================================
+
 const menuProducts = [
-    // Boissons Chaudes
+
     { id: 1, name: "Espresso", category: "boissons-chaudes", price: 3.50 },
     { id: 2, name: "Cappuccino", category: "boissons-chaudes", price: 5.00 },
     { id: 3, name: "Thé Vert", category: "boissons-chaudes", price: 4.00 },
@@ -37,7 +35,6 @@ let slideIndex = 0;
 
 function showSlides() {
     const slides = document.querySelectorAll(".slide");
-    if (slides.length === 0) return;
 
     slides.forEach(slide => slide.classList.remove("active"));
     
@@ -49,9 +46,6 @@ function showSlides() {
     setTimeout(showSlides, 4000);
 }
 
-// =========================================================
-// DÉMARRAGE AU CHARGEMENT DE LA PAGE
-// =========================================================
 document.addEventListener('DOMContentLoaded', function() {
     showSlides();
     loadMenuItems();
@@ -59,9 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
     setupClearButton();
 });
 
-// =========================================================
-// AFFICHER LES PRODUITS
-// =========================================================
 function loadMenuItems() {
     const itemsContainer = document.getElementById('items-container');
     if (!itemsContainer) return;
@@ -69,7 +60,6 @@ function loadMenuItems() {
     menuProducts.forEach(product => {
         const itemDiv = document.createElement('div');
         itemDiv.className = 'menu-item';
-        
         itemDiv.innerHTML = `
             <input type="checkbox" 
                    id="item-${product.id}" 
@@ -97,19 +87,9 @@ function setupCheckboxListeners() {
         }
     });
     
-    document.addEventListener('click', function(e) {
-        if (e.target.closest('.menu-item') && e.target.type !== 'checkbox') {
-            const item = e.target.closest('.menu-item');
-            const checkbox = item.querySelector('.item-checkbox');
-            checkbox.checked = !checkbox.checked;
-            calculateInvoice();
-        }
-    });
+   
 }
 
-// =========================================================
-// CALCULER LA FACTURE
-// =========================================================
 function calculateInvoice() {
     const invoiceItems = document.getElementById('invoice-items');
     const totalElement = document.getElementById('total');
@@ -120,6 +100,7 @@ function calculateInvoice() {
         totalElement.textContent = '0.00 DT';
         return;
     }
+
     
     let total = 0;
     invoiceItems.innerHTML = '';
@@ -140,13 +121,8 @@ function calculateInvoice() {
     totalElement.textContent = total.toFixed(2) + ' DT';
 }
 
-// =========================================================
-// BOUTON EFFACER
-// =========================================================
 function setupClearButton() {
-    const clearBtn = document.getElementById('clear-order');
-    if (!clearBtn) return;
-    
+    const clearBtn = document.getElementById('clear-order'); 
     clearBtn.addEventListener('click', function() {
         document.querySelectorAll('.item-checkbox').forEach(checkbox => {
             checkbox.checked = false;

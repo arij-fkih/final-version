@@ -1,6 +1,3 @@
-// =========================================================
-// FILTRAGE PAR CATÉGORIE
-// =========================================================
 const filterButtons = document.querySelectorAll('.filter-btn');
 const productCards = document.querySelectorAll('.product-card');
 
